@@ -1,0 +1,17 @@
+Program 5b: Program to Demonstrate Conditional Compilation 
+#include <stdio.h> 
+#define DEBUG  // comment this line to disable debug messages 
+int main() { 
+int a = 10, b = 5, sum; 
+sum = a + b; 
+#ifdef DEBUG 
+printf("Debug: a = %d, b = %d\n", a, b); 
+#endif 
+printf("Sum = %d\n", sum); 
+return 0; 
+} 
+Output (with DEBUG defined) 
+Debug: a = 10, b = 5 
+Sum = 15 
+Output (if #define DEBUG is removed)
+sum=15
